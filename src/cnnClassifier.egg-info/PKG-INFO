@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small package for kidney disease classification using CNN
+Home-page: https://github.com/fakhar-iqbal/KIDNEY-DISEASE-CLASSIFICATION-MLFLOW-DVC
+Author: fakhar-iqbal
+Author-email: fakhareiqbal3534@gmail.com
+Project-URL: Bug Tracker, https://github.com/fakhar-iqbal/KIDNEY-DISEASE-CLASSIFICATION-MLFLOW-DVC/issues
+Description-Content-Type: text/markdown
+
+# Kidney-Disease-Classification-MLFlow-DVC
