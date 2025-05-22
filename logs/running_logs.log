@@ -1,0 +1,16 @@
+[2025-05-22 18:19:42,727: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-22 18:19:42,734: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-22 18:19:42,737: INFO: common: created directory at: artifacts]
+[2025-05-22 18:19:42,741: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-22 18:19:42,744: INFO: 1259546782: downloading data from: https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-05-22 18:25:29,970: INFO: 1259546782: Downloaded data from https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into artifacts/data_ingestion/data.zip]
+[2025-05-22 21:45:22,473: INFO: main: >>>>>>>>>>>> stage Data Ingestion Stage started <<<<<<<<<<<<<]
+[2025-05-22 21:45:22,476: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-22 21:45:22,480: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-22 21:45:22,481: INFO: common: created directory at: artifacts]
+[2025-05-22 21:45:22,484: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-22 21:45:22,485: INFO: data_ingestion: downloading data from: https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-05-22 21:50:55,228: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into artifacts/data_ingestion/data.zip]
+[2025-05-22 21:51:34,630: INFO: main: >>>>>>>>>> stage Data Ingestion Stage completed <<<<<<<<<<
+
+x=============x]
