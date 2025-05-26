@@ -126,3 +126,12 @@ x=============x]
 [2025-05-26 23:09:11,693: INFO: main: >>>>>>>>>> stage Prepare Base Model Stage completed <<<<<<<<<<
 
 x=============x]
+[2025-05-26 23:11:42,608: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-26 23:11:42,616: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-26 23:11:42,622: INFO: common: created directory at: artifacts]
+[2025-05-26 23:11:42,626: INFO: common: created directory at: artifacts\training]
+[2025-05-26 23:28:08,688: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-26 23:34:06,855: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-26 23:34:06,877: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-26 23:34:06,880: INFO: common: created directory at: artifacts]
+[2025-05-26 23:34:06,882: INFO: common: created directory at: artifacts\training]
