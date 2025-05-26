@@ -14,3 +14,23 @@
 [2025-05-22 21:51:34,630: INFO: main: >>>>>>>>>> stage Data Ingestion Stage completed <<<<<<<<<<
 
 x=============x]
+[2025-05-26 20:31:39,774: INFO: main: >>>>>>>>>>>> stage Data Ingestion Stage started <<<<<<<<<<<<<]
+[2025-05-26 20:31:39,777: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-26 20:31:39,779: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-26 20:31:39,780: INFO: common: created directory at: artifacts]
+[2025-05-26 20:31:39,781: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-26 20:31:39,782: INFO: data_ingestion: downloading data from: https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-05-26 20:38:24,141: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into artifacts/data_ingestion/data.zip]
+[2025-05-26 20:39:11,661: INFO: main: >>>>>>>>>> stage Data Ingestion Stage completed <<<<<<<<<<
+
+x=============x]
+[2025-05-26 20:39:11,713: INFO: main: >>>>>>>>>>>> stage Prepare Base Model Stage started <<<<<<<<<<<<<]
+[2025-05-26 20:39:12,102: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-26 20:39:12,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-26 20:39:12,244: INFO: common: created directory at: artifacts]
+[2025-05-26 20:39:12,246: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-05-26 20:39:15,272: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-26 20:39:16,687: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-26 20:39:17,019: INFO: main: >>>>>>>>>> stage Prepare Base Model Stage completed <<<<<<<<<<
+
+x=============x]
