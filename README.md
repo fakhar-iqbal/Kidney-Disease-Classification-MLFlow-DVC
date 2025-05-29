@@ -51,9 +51,9 @@ python script.py
 
 Run this to export as env variables:
 ```bash
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow
+set MLFLOW_TRACKING_URI=https://dagshub.com/fakhar-iqbal/Kidney-Disease-Classification-MLFlow-DVC.mlflow
 
-export MLFLOW_TRACKING_USERNAME=entbappy 
+set MLFLOW_TRACKING_USERNAME=fakhar-iqbal 
 
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
+set MLFLOW_TRACKING_PASSWORD= 6913d694a6121a1db4dc642442e78536fe3fe5ed
 ```
