@@ -12,5 +12,5 @@ prepare_base_model:
   updated_base_model_path: artifacts/prepare_base_model/base_model_updated.h5
 
 training:
-  root_dir: artifacts/training
-  trained_model_path: artifacts/training/model.h5
+  root_dir: model
+  trained_model_path: model/model.h5

@@ -1,3 +1,4 @@
+import os
 from cnnClassifier.constants import *
 from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import DataIngestionConfig, EvaluationConfig, PrepareBaseModelConfig, TrainingConfig
@@ -66,7 +67,7 @@ class ConfigurationManager:
     
     def get_evaluation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
-            path_to_model= "artifacts/training/model.h5",
+            path_to_model= "model/model.h5",
             training_data= "artifacts/data_ingestion/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone",
             all_params= self.params,
             params_batch_size= self.params.BATCH_SIZE,
