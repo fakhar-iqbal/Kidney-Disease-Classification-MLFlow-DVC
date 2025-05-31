@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kidney disease Classification</title>
+	<link rel="shortcut icon"         href="data:image/png;base64,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"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			min-height: 100vh;
+			font-family: 'Inter', sans-serif;
+			color: #2d3748;
+		}
+
+		.main-container {
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(20px);
+			border-radius: 24px;
+			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+			margin: 2rem;
+			padding: 3rem;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+
+		.header-section {
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+
+		.main-title {
+			font-size: 3rem;
+			font-weight: 700;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			margin-bottom: 0.5rem;
+			letter-spacing: -0.02em;
+		}
+
+		.subtitle {
+			font-size: 1.2rem;
+			color: #64748b;
+			font-weight: 400;
+		}
+
+		.content-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+			align-items: start;
+		}
+
+		.upload-section {
+			background: white;
+			border-radius: 20px;
+			padding: 2rem;
+			box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+			border: 1px solid #e2e8f0;
+		}
+
+		.image-preview-container {
+			position: relative;
+			width: 100%;
+			height: 350px;
+			border-radius: 16px;
+			overflow: hidden;
+			background: linear-gradient(45deg, #f8fafc, #e2e8f0);
+			border: 2px dashed #cbd5e0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 2rem;
+			transition: all 0.3s ease;
+		}
+
+		.image-preview-container:hover {
+			border-color: #667eea;
+			background: linear-gradient(45deg, #f8fafc, #edf2f7);
+		}
+
+		.image-preview-container video,
+		.image-preview-container img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 14px;
+		}
+
+		.image-preview-container #video {
+			display: block;
+		}
+
+		.image-preview-container #photo {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.upload-placeholder {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			color: #94a3b8;
+			font-size: 1.1rem;
+		}
+
+		.upload-placeholder i {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+			color: #cbd5e0;
+		}
+
+		.controls-section {
+			display: flex;
+			gap: 1rem;
+		}
+
+		.btn-modern {
+			flex: 1;
+			padding: 0.875rem 1.5rem;
+			border-radius: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			font-size: 0.875rem;
+			transition: all 0.3s ease;
+			border: none;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.btn-upload {
+			background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+			color: white;
+			box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+		}
+
+		.btn-upload:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+		}
+
+		.btn-predict {
+			background: linear-gradient(135deg, #10b981, #059669);
+			color: white;
+			box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+		}
+
+		.btn-predict:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+		}
+
+		.btn-modern:active {
+			transform: translateY(0);
+		}
+
+		.results-section {
+			background: white;
+			border-radius: 20px;
+			padding: 2rem;
+			box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+			border: 1px solid #e2e8f0;
+		}
+
+		.results-header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1.5rem;
+			padding-bottom: 1rem;
+			border-bottom: 2px solid #f1f5f9;
+		}
+
+		.results-header h5 {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: #1e293b;
+			margin: 0;
+			margin-left: 0.5rem;
+		}
+
+		.results-header i {
+			color: #667eea;
+			font-size: 1.5rem;
+		}
+
+		.results-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5rem;
+		}
+
+		.result-image-container {
+			background: #f8fafc;
+			border-radius: 12px;
+			padding: 1rem;
+			border: 1px solid #e2e8f0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 300px;
+		}
+
+		.result-image-container img {
+			max-width: 100%;
+			max-height: 280px;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		}
+
+		.result-json-container {
+			background: #1e293b;
+			border-radius: 12px;
+			padding: 1.5rem;
+			border: 1px solid #334155;
+			overflow: auto;
+			max-height: 320px;
+		}
+
+		.result-json-container pre {
+			color: #e2e8f0;
+			font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+			font-size: 0.875rem;
+			line-height: 1.6;
+			margin: 0;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+		}
+
+		.empty-state {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 300px;
+			color: #94a3b8;
+			text-align: center;
+		}
+
+		.empty-state i {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+			color: #cbd5e0;
+		}
+
+		.empty-state p {
+			font-size: 1.1rem;
+			margin: 0;
+		}
+
+		#loading {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(5px);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.modern-loader {
+			width: 80px;
+			height: 80px;
+			border: 4px solid #f1f5f9;
+			border-top: 4px solid #667eea;
+			border-radius: 50%;
+			animation: modernSpin 1s linear infinite;
+			position: relative;
+		}
+
+		.modern-loader::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 40px;
+			height: 40px;
+			border: 3px solid transparent;
+			border-top: 3px solid #764ba2;
+			border-radius: 50%;
+			animation: modernSpin 2s linear infinite reverse;
+		}
+
+		@keyframes modernSpin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+		.logo {
+			position: fixed;
+			right: 2rem;
+			bottom: 2rem;
+			opacity: 0.7;
+			transition: opacity 0.3s ease;
+		}
+
+		.logo:hover {
+			opacity: 1;
+		}
+
+		#canvas {
+			display: none;
+		}
+
+		#fileinput {
+			position: absolute;
+			top: -500px;
+			opacity: 0;
+		}
+
+		@media (max-width: 768px) {
+			.main-container {
+				margin: 1rem;
+				padding: 2rem;
+			}
+
+			.main-title {
+				font-size: 2rem;
+			}
+
+			.content-grid {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+
+			.results-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.controls-section {
+				flex-direction: column;
+			}
+		}
+
+		/* JSON Syntax Highlighting */
+		.json-key { color: #f97316; }
+		.json-string { color: #22c55e; }
+		.json-number { color: #3b82f6; }
+		.json-boolean { color: #a855f7; }
+		.json-null { color: #ef4444; }
+	</style>
+</head>
+<body>
+    <div class="container-fluid">
+		<div class="main-container">
+			<div class="header-section">
+				<h1 class="main-title">Medic AI</h1>
+				<p class="subtitle">Kidney Stones detection</p>
+			</div>
+
+			<div class="content-grid">
+				<div class="upload-section">
+					<div class="image-preview-container">
+						<video autoplay id="video" poster="https://img.freepik.com/free-vector/group-young-people-posing-photo_52683-18824.jpg?size=338&ext=jpg"></video>
+						<img src="" id="photo">
+						<canvas id="canvas"></canvas>
+					</div>
+					
+					<div class="controls-section">
+						<form id="upload-data" class="d-flex w-100" style="gap: 1rem;">
+							<button type="button" class="btn-modern btn-upload" id="uload">
+								<i class="fas fa-cloud-upload-alt me-2"></i>
+								Upload Image
+							</button>
+							<button id="send" type="button" class="btn-modern btn-predict">
+								<i class="fas fa-brain me-2"></i>
+								Analyze
+							</button>
+							<input type="hidden" class="form-control" id="url" value="../predict"/>
+							<input name="upload" type="file" id="fileinput"/><br/>
+						</form>
+					</div>
+				</div>
+
+				<div class="results-section">
+					<div class="results-header">
+						<i class="fas fa-chart-line"></i>
+						<h5>Classification Results</h5>
+					</div>
+					<div class="results-grid">
+						<div class="result-image-container res-part2">
+							<div class="empty-state">
+								<i class="fas fa-image"></i>
+								<p>Processed image will appear here</p>
+							</div>
+						</div>
+						<div class="result-json-container res-part">
+							<div class="empty-state">
+								<i class="fas fa-code"></i>
+								<p>Analysis results will appear here</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAAAlCAMAAABBJDpuAAAAVFBMVEX/fgD/iQA7NzIyMjMnNYInNYEnNYInNYEzMzInNYQnNYETJzsnNYIwN1wxMjNoTis4O1YrNm0xOF47PE9DP0dEQEVpTVkAJJ4nNYEOLJHJbiAzMzOmmmHRAAAAFnRSTlOh/vu+986oen9fP2UqEzQkFAIDAAEEILVBJQAAA3FJREFUWMPNmO2WoyAMQG0VBARtdVRs3/89NwkgaF1rd2aOm18tIrnkgwSz7n+R7LcV1ELkeS7E7VySRlyfQXJhTiO55c+liP4cEuH1X8E7gaV+S3Jv2zYZ/Vr+/Sdx2vP6doc/fSPcf/GOpLSFVXFUW8t+giRP47TOd60yk1hbxIhSP0ACKPWrvw7YBIT/lcQY84G3Wk17ugWQfg5UsQJpjflKSLQi7xTWyk0SXTJ4VnB5D1yccxmp4Z+mX5KGNS+SPXVNll0ulyxL0wYmloBB6zL/MpCoAgjAJiUM6w0SboMwPUdRogvNKcNM3smFdRvEcJJkKcflQa+X0pNIfBGW0zKqjyQtw4VLKQlI7ZLgdrRNSZDjMQx2GB4pCkxkCrfGWUTJ0Egan6muCHgJCUwtnCk0mrJ9Q8K5LUqtdSfynkAedhynaRqngVDaXLiJEAzkFkM71IuIlWRYtSQpbXSZDvQ7JPCei9brs+oaABkn74LRIkpFaVxGnzjvIxTYREOoEwn5r01JTDRTcO87Eu3zNUeTPKZpjrIRrNIDCjzALbPk7LJMIokOEQu2K7yKQAKvFDF9pVe0R+LGb7h1MMkw2ijjA/1zhSfSphvEAChXJEhAqwYStIJWXnTpvbdH4hTUwSQ2JRmQpILDLYbB7J41SYiLcNozu5Z3JMo7RxBJahI7WSRByCMkqJt9hySESbVJcvmARJGFExJmdBSl2oM2+T4JLWfgaGFptizlPUm1FydHSdyZ7UnS4ySph2kS0kJrkvr5NJg7dnrJnfxgxPozRPGtkyPNOxtaiDvbIAF9L+5B5zTI2BwlwXmM+U3zReav3o0F8oUEFFZ42McDZYomOUziFmezgWyo251Uc1nyKJol7URCEvIYUEbHYaEGQi9C9egwCdVfHwiaajfjKMUcHcRacCylhWJbJDfq47EEDhYqoIWjHnwDXZPpPiChPQelLU+Cbm4w50FmYgkvFwpiWwCC/Um/SLcNElOC9RVj6qWpCiEMvRUK4zLpdKmPw8rVldy/qxjn60wLrVLWJIPLiZJRr3fsvnOHPvare+lB93tb37T20D82jqOt+zNuXhuNvNhp7X+PpHb3rvV9R5xjE2SpyCN9ffQO+GtWIZr5Xnytz4gTMIRYfys47/uJEXny/aQ/95tSUwmU+uRvSp/IHzQqZYpYrQmxAAAAAElFTkSuQmCC" />
+
+	<div id="loading" style="display: none;">
+		<div class="modern-loader"></div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script>
+		var mybtn = document.getElementById('startbtn');
+		var myvideo = document.getElementById('video');
+		var mycanvas = document.getElementById('canvas');
+		var myphoto = document.getElementById('photo');
+		var base_data = "";
+
+		function syntaxHighlight(json) {
+			if (typeof json != "string") {
+				json = JSON.stringify(json, undefined, 2);
+			}
+			json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+			return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+				var cls = 'json-number';
+				if (/^"/.test(match)) {
+					if (/:$/.test(match)) {
+						cls = 'json-key';
+					} else {
+						cls = 'json-string';
+					}
+				} else if (/true|false/.test(match)) {
+					cls = 'json-boolean';
+				} else if (/null/.test(match)) {
+					cls = 'json-null';
+				}
+				return '<span class="' + cls + '">' + match + '</span>';
+			});
+		}
+
+		function sendRequest(base64Data){
+			var type = "json";
+			if(base64Data != "" || base64Data != null){
+				if(type == "imgtobase"){
+					$(".res-part").html("");
+					$(".res-part").html(base64Data);
+				}
+				else if(type == "basetoimg"){
+					var imageData = $("#imgstring").val();
+					$(".res-part").html("");
+					$(".res-part").append("<img src='data:image/jpeg;base64," + imageData + "' alt='' />");
+				}
+				else{
+					var url = $("#url").val();
+					$("#loading").show();
+					$.ajax({
+						url : url,
+						type: "post",
+						cache: false,
+						async: true,
+						crossDomain: true,
+						headers: {
+							'Content-Type': 'application/json',
+							'Access-Control-Allow-Origin':'*'
+						},
+						data:JSON.stringify({image:base64Data}),
+						success: function(res){
+							$(".res-part").html("");
+							$(".res-part2").html("");
+							try{
+								var imageData = res[1].image;
+								if(imageData.length > 100){
+									if(imageData.length > 10){
+										$(".res-part2").html("<img src='data:image/jpeg;base64," + imageData + "' alt='Processed Result' />");
+									}
+								}
+							}catch(e){}
+							
+							var highlightedJson = syntaxHighlight(res[0]);
+							$(".res-part").html("<pre>" + highlightedJson + "</pre>");
+							$("#loading").hide();
+						},
+						error: function(xhr, status, error) {
+							$(".res-part").html('<div class="empty-state"><i class="fas fa-exclamation-triangle"></i><p>Error processing request</p></div>');
+							$("#loading").hide();
+						}
+					});
+				}
+			}
+		}
+
+		$(document).ready(function(){
+			$("#loading").hide();
+
+			$('#send').click(function(evt){
+				if(base_data) {
+					sendRequest(base_data);
+				} else {
+					alert('Please upload an image first');
+				}
+			});
+
+			$('#uload').click(function(evt) {
+				$('#fileinput').focus().trigger('click');
+			});
+
+			$("#fileinput").change(function(){
+				if (this.files && this.files[0]){
+					var reader = new FileReader();
+					reader.onload = function (e){
+						var url = e.target.result;
+						var img = new Image();
+						img.crossOrigin = 'Anonymous';
+						img.onload = function(){
+							var canvas = document.createElement('CANVAS');
+							var ctx = canvas.getContext('2d');
+							canvas.height = this.height;
+							canvas.width = this.width;
+							ctx.drawImage(this, 0, 0);
+							base_data = canvas.toDataURL('image/jpeg', 1.0).replace(/^data:image.+;base64,/, '');
+							canvas = null;
+						};
+						img.src = url;
+						$('#photo').attr('src', url);
+						$('#photo').show();
+						$('#video').hide();
+					}
+					reader.readAsDataURL(this.files[0]);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

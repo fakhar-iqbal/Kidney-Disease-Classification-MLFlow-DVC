@@ -135,3 +135,10 @@ x=============x]
 [2025-05-26 23:34:06,877: INFO: common: yaml file: params.yaml loaded successfully]
 [2025-05-26 23:34:06,880: INFO: common: created directory at: artifacts]
 [2025-05-26 23:34:06,882: INFO: common: created directory at: artifacts\training]
+[2025-06-01 04:13:51,891: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 04:13:51,893: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 04:13:57,054: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 04:13:57] "GET / HTTP/1.1" 200 -]
+[2025-06-01 04:14:19,982: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 04:14:19] "[33mPOST /predict HTTP/1.1[0m" 404 -]
