@@ -74,3 +74,5 @@ class ConfigurationManager:
             params_image_size= self.params.IMAGE_SIZE,
             mlflow_uri= "https://dagshub.com/fakhar-iqbal/Kidney-Disease-Classification-MLFlow-DVC.mlflow"
         )
+        
+        return eval_config

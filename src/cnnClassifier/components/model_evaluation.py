@@ -8,7 +8,7 @@ from cnnClassifier.entity.config_entity import EvaluationConfig
 from cnnClassifier.utils.common import save_json
 
 class Evaluation:
-    def __init__(self, config = EvaluationConfig):
+    def __init__(self, config: EvaluationConfig):
         self.config = config
         
     def _valid_generator(self):
