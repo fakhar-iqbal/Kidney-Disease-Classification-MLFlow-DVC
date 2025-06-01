@@ -26,7 +26,7 @@ def home():
 @cross_origin()
 def trainRoute():
     os.system("dvc repro")
-    return "Training done successfully"
+    return "Training completed successfully"
 
 @app.route("/predict", methods=['POST'])
 @cross_origin()
