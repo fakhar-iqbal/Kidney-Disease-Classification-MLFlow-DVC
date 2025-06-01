@@ -22,7 +22,7 @@ stages:
       - artifacts/prepare_base_model
 
   training:
-    cmd: src/cnnClassifier/pipeline/stage03_training.py
+    cmd: python src/cnnClassifier/pipeline/stage03_training.py
     deps:
       - src/cnnClassifier/pipeline/stage03_training.py
       - config/config.yaml
@@ -30,7 +30,7 @@ stages:
       - artifacts/prepare_base_model
     params:
       - IMAGE_SIZE
-      - EOPCHS
+      - EPOCHS
       - BATCH_SIZE
       - AUGMENTATION
     outs:
@@ -38,10 +38,9 @@ stages:
   evaluation:
     cmd: python src/cnnClassifier/pipeline/stage04_model_evaluation.py
     deps:
-      - scr/cnnClassifier/pipeline/stage04_model_evaluation
+      - src/cnnClassifier/pipeline/stage04_model_evaluation.py
       - config/config.yaml
       - artifacts/data_ingestion/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone
-      - artifacts/training/model.h5
       - model/model.h5
     params:
       - IMAGE_SIZE

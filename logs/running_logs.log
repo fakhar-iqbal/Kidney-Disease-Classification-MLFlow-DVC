@@ -170,3 +170,213 @@ x=============x]
 [2025-06-01 05:47:36,157: INFO: common: created directory at: artifacts]
 [2025-06-01 05:47:36,159: INFO: common: created directory at: artifacts/data_ingestion]
 [2025-06-01 05:47:36,161: INFO: data_ingestion: downloading data from: https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-06-01 05:57:05,403: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 05:57:05,404: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 05:57:08,568: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:57:08] "GET / HTTP/1.1" 200 -]
+[2025-06-01 05:57:21,176: INFO: stage01_data_ingestion: >>>>>>>>>>>> stage Data Ingestion Stage started <<<<<<<<<<<<<]
+[2025-06-01 05:57:21,190: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 05:57:21,194: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 05:57:21,195: INFO: common: created directory at: artifacts]
+[2025-06-01 05:57:21,197: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-01 05:57:21,198: INFO: data_ingestion: downloading data from: https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-06-01 05:57:49,037: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into artifacts/data_ingestion/data.zip]
+[2025-06-01 05:57:51,258: INFO: stage01_data_ingestion: >>>>>>>>>> stage Data Ingestion Stage completed <<<<<<<<<<
+
+x===========x]
+[2025-06-01 05:58:13,204: INFO: stage02_prepare_base_model: >>>>>>>>>>>> stage Prepare Base Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 05:58:13,205: ERROR: stage02_prepare_base_model: PrepareBaseModel.__init__() missing 1 required positional argument: 'config']
+Traceback (most recent call last):
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage02_prepare_base_model.py", line 20, in <module>
+    obj = PrepareBaseModel()
+          ^^^^^^^^^^^^^^^^^^
+TypeError: PrepareBaseModel.__init__() missing 1 required positional argument: 'config'
+[2025-06-01 05:58:14,343: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:58:14] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 05:59:21,663: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 05:59:21,666: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 05:59:42,168: INFO: stage02_prepare_base_model: >>>>>>>>>>>> stage Prepare Base Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 05:59:42,171: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 05:59:42,174: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 05:59:42,174: INFO: common: created directory at: artifacts]
+[2025-06-01 05:59:42,176: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-06-01 05:59:42,912: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-06-01 05:59:43,269: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-06-01 05:59:43,414: INFO: stage02_prepare_base_model: >>>>>>>>>> stage Prepare Base Model Stage completed <<<<<<<<<<
+
+x===========x]
+[2025-06-01 05:59:45,938: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:59:45] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:00:23,350: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:00:23,356: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:00:30,104: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:00:30] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:01:51,239: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:01:51,242: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:02:06,932: INFO: stage03_training: >>>>>>>>>>>> stage Training Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:02:06,935: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:02:06,937: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:02:06,938: INFO: common: created directory at: artifacts]
+[2025-06-01 06:02:06,939: INFO: common: created directory at: model]
+[2025-06-01 06:30:17,304: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-06-01 06:30:17,591: INFO: stage03_training: >>>>>>>>>> stage Training Model Stage completed <<<<<<<<<<
+
+x===========x]
+[2025-06-01 06:30:22,318: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:30:22] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:35:55,569: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:35:55,571: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:37:20,256: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:37:20,257: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:37:32,246: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:37:32] "GET / HTTP/1.1" 200 -]
+[2025-06-01 06:37:45,651: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:37:45] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:40:15,304: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:40:15,306: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:40:35,222: INFO: stage04_model_evaluation: >>>>>>>>>>>> stage Evaluate Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:40:35,225: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:40:35,229: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:40:35,232: INFO: common: created directory at: artifacts]
+[2025-06-01 06:40:35,232: ERROR: stage04_model_evaluation: 'NoneType' object has no attribute 'path_to_model']
+Traceback (most recent call last):
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage04_model_evaluation.py", line 21, in <module>
+    obj.main()
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage04_model_evaluation.py", line 15, in main
+    evaluation.evaluation()
+  File "c:\users\fakhar-e-iqbal\documents\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\model_evaluation.py", line 43, in evaluation
+    self.model = self.load_model(self.config.path_to_model)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'path_to_model'
+[2025-06-01 06:40:36,766: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:40:36] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:44:07,809: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:44:07,814: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:44:43,585: INFO: stage04_model_evaluation: >>>>>>>>>>>> stage Evaluate Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:44:43,588: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:44:43,590: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:44:43,591: INFO: common: created directory at: artifacts]
+[2025-06-01 06:44:43,592: ERROR: stage04_model_evaluation: 'NoneType' object has no attribute 'path_to_model']
+Traceback (most recent call last):
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage04_model_evaluation.py", line 21, in <module>
+    obj.main()
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage04_model_evaluation.py", line 15, in main
+    evaluation.evaluation()
+  File "c:\users\fakhar-e-iqbal\documents\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\model_evaluation.py", line 43, in evaluation
+    self.model = self.load_model(self.config.path_to_model)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'path_to_model'
+[2025-06-01 06:44:45,281: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:44:45] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:47:06,414: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:47:06,415: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:48:02,224: INFO: stage04_model_evaluation: >>>>>>>>>>>> stage Evaluate Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:48:02,227: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:48:02,229: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:48:02,230: INFO: common: created directory at: artifacts]
+[2025-06-01 06:48:02,231: ERROR: stage04_model_evaluation: 'NoneType' object has no attribute 'path_to_model']
+Traceback (most recent call last):
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage04_model_evaluation.py", line 21, in <module>
+    obj.main()
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage04_model_evaluation.py", line 15, in main
+    evaluation.evaluation()
+  File "c:\users\fakhar-e-iqbal\documents\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\model_evaluation.py", line 43, in evaluation
+    self.model = self.load_model(self.config.path_to_model)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'path_to_model'
+[2025-06-01 06:48:03,991: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:48:03] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:55:29,178: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:55:29,179: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:55:38,315: INFO: stage01_data_ingestion: >>>>>>>>>>>> stage Data Ingestion Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:55:38,318: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:55:38,320: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:55:38,321: INFO: common: created directory at: artifacts]
+[2025-06-01 06:55:38,322: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-01 06:55:38,322: INFO: data_ingestion: downloading data from: https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-06-01 06:56:06,363: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into artifacts/data_ingestion/data.zip]
+[2025-06-01 06:56:08,864: INFO: stage01_data_ingestion: >>>>>>>>>> stage Data Ingestion Stage completed <<<<<<<<<<
+
+x===========x]
+[2025-06-01 06:56:32,120: INFO: stage02_prepare_base_model: >>>>>>>>>>>> stage Prepare Base Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:56:32,122: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:56:32,124: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:56:32,125: INFO: common: created directory at: artifacts]
+[2025-06-01 06:56:32,127: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-06-01 06:56:32,852: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-06-01 06:56:33,108: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-06-01 06:56:33,285: INFO: stage02_prepare_base_model: >>>>>>>>>> stage Prepare Base Model Stage completed <<<<<<<<<<
+
+x===========x]
+[2025-06-01 06:56:47,151: INFO: stage03_training: >>>>>>>>>>>> stage Training Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:56:47,155: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:56:47,158: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:56:47,158: INFO: common: created directory at: artifacts]
+[2025-06-01 06:56:47,160: INFO: common: created directory at: model]
+[2025-06-01 06:56:47,660: ERROR: stage03_training: cannot access local variable 'callbacks' where it is not associated with a value]
+Traceback (most recent call last):
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage03_training.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\Fakhar-E-Iqbal\Documents\Kidney-Disease-Classification-MLFlow-DVC\src\cnnClassifier\pipeline\stage03_training.py", line 17, in main
+    training.train()
+  File "c:\users\fakhar-e-iqbal\documents\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\training.py", line 85, in train
+    callbacks=callbacks
+              ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'callbacks' where it is not associated with a value
+[2025-06-01 06:56:48,872: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 06:56:48] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 06:58:05,619: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 06:58:05,622: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 06:58:23,827: INFO: stage03_training: >>>>>>>>>>>> stage Training Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 06:58:23,830: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 06:58:23,832: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 06:58:23,832: INFO: common: created directory at: artifacts]
+[2025-06-01 06:58:23,833: INFO: common: created directory at: model]
+[2025-06-01 07:54:29,390: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-06-01 07:54:29,688: INFO: stage03_training: >>>>>>>>>> stage Training Model Stage completed <<<<<<<<<<
+
+x===========x]
+[2025-06-01 07:54:47,171: INFO: stage04_model_evaluation: >>>>>>>>>>>> stage Evaluate Model Stage started <<<<<<<<<<<<<]
+[2025-06-01 07:54:47,174: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 07:54:47,178: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 07:54:47,179: INFO: common: created directory at: artifacts]
+[2025-06-01 07:54:47,627: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-06-01 07:55:49,598: INFO: common: json file saved at: scores.json]
+[2025-06-01 07:56:27,997: INFO: stage04_model_evaluation: >>>>>>>>>> stage Evaluate Model Stage completed <<<<<<<<<<
+
+x===========x]
+[2025-06-01 07:56:30,219: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 07:56:30] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 07:56:59,556: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 07:56:59] "GET / HTTP/1.1" 200 -]
+[2025-06-01 07:57:41,865: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 07:57:41] "[33mPOST /predict HTTP/1.1[0m" 404 -]
+[2025-06-01 07:58:20,899: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 07:58:20,900: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 07:58:23,500: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 07:58:23] "GET / HTTP/1.1" 200 -]
+[2025-06-01 07:58:30,418: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-06-01 07:58:35,191: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 07:58:35] "POST /predict HTTP/1.1" 200 -]
+[2025-06-01 07:58:52,455: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-06-01 07:58:54,277: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 07:58:54] "POST /predict HTTP/1.1" 200 -]

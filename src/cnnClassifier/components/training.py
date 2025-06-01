@@ -3,6 +3,7 @@ import urllib.request as request
 from zipfile import ZipFile
 import tensorflow as tf
 from pathlib import Path
+import math
 
 from cnnClassifier.entity.config_entity import TrainingConfig
 
@@ -73,16 +74,24 @@ class Training:
         model.save(path)
     
     def train(self):
-        self.steps_per_epoch = self.train_generator.samples // self.train_generator.batch_size
-        self.validation_steps = self.valid_generator.samples // self.valid_generator.batch_size
+        self.steps_per_epoch = math.ceil(self.train_generator.samples // self.train_generator.batch_size)
+        self.validation_steps = math.ceil(self.valid_generator.samples // self.valid_generator.batch_size)
+        
+        callbacks = [
+                        tf.keras.callbacks.EarlyStopping(
+                            monitor='val_loss',
+                            patience=3,
+                            restore_best_weights=True
+                            
+                        )
+                    ]
+
         
         self.model.fit(
             self.train_generator,
             epochs = self.config.params_epochs,
-            steps_per_epoch = self.steps_per_epoch,
-            validation_steps = self.validation_steps,
             validation_data = self.valid_generator,
-            
+            callbacks=callbacks
         )
         
         self.save_model(
