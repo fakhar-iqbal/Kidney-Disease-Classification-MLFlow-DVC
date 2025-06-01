@@ -142,3 +142,31 @@ x=============x]
 [2025-06-01 04:13:51,893: INFO: _internal: [33mPress CTRL+C to quit[0m]
 [2025-06-01 04:13:57,054: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 04:13:57] "GET / HTTP/1.1" 200 -]
 [2025-06-01 04:14:19,982: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 04:14:19] "[33mPOST /predict HTTP/1.1[0m" 404 -]
+[2025-06-01 05:43:53,835: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 05:43:53,839: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 05:43:58,695: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:43:58] "GET / HTTP/1.1" 200 -]
+[2025-06-01 05:44:12,981: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:44:12] "GET / HTTP/1.1" 200 -]
+[2025-06-01 05:44:22,836: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:44:22] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 05:44:22,978: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:44:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-06-01 05:45:57,634: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 05:45:57,636: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 05:46:01,934: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:46:01] "GET / HTTP/1.1" 200 -]
+[2025-06-01 05:46:10,465: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:46:10] "GET /train HTTP/1.1" 200 -]
+[2025-06-01 05:47:21,687: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.105:8080]
+[2025-06-01 05:47:21,699: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-06-01 05:47:27,451: INFO: _internal: 127.0.0.1 - - [01/Jun/2025 05:47:27] "GET / HTTP/1.1" 200 -]
+[2025-06-01 05:47:36,103: INFO: stage01_data_ingestion: >>>>>>>>>>>> stage Data Ingestion Stage started <<<<<<<<<<<<<]
+[2025-06-01 05:47:36,109: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-01 05:47:36,126: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-01 05:47:36,157: INFO: common: created directory at: artifacts]
+[2025-06-01 05:47:36,159: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-01 05:47:36,161: INFO: data_ingestion: downloading data from: https://drive.google.com/file/d/1Qqgs7TEjG5iL_LhzyJp3A4ZQf5pkwlrC/view?usp=sharing into : artifacts/data_ingestion/data.zip]
