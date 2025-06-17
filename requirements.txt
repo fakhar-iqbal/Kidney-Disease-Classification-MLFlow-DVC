@@ -1,7 +1,6 @@
 tensorflow
 pandas
 dvc
-mlflow
 notebook
 numpy
 matplotlib
@@ -16,4 +15,14 @@ scipy
 Flask
 Flask-Cors
 gdown
+# Data versioning and pipeline
+dvc[s3]
+gunicorn
+# AWS SDK
+aiobotocore[boto3]==2.10.0
+botocore
+boto3
+s3transfer
+
+ujson
 -e .

@@ -1,0 +1,43 @@
+  {
+    "jobDefinitionName": "kidney-disease-training-job",
+    "type": "container",
+    "containerProperties": {
+      "image": "YOUR_ACCOUNT_ID.dkr.ecr.YOUR_REGION.amazonaws.com/kidney-disease-classifier:latest",
+      "vcpus": 4,
+      "memory": 16384,
+      "jobRoleArn": "arn:aws:iam::YOUR_ACCOUNT_ID:role/BatchJobRole",
+      "resourceRequirements": [
+        {
+          "type": "GPU",
+          "value": "1"
+        }
+      ],
+      "environment": [
+        {
+          "name": "AWS_DEFAULT_REGION",
+          "value": "us-east-1"
+        },
+        {
+          "name": "S3_BUCKET",
+          "value": "kidney_disease_bucket"
+        },
+        {
+          "name": "PYTHONPATH",
+          "value": "/app/src:/app"
+        },
+        {
+          "name": "DVC_CACHE_TYPE",
+          "value": "s3"
+        }
+      ],
+      "mountPoints": [],
+      "volumes": [],
+      "ulimits": []
+    },
+    "retryStrategy": {
+      "attempts": 2
+    },
+    "timeout": {
+      "attemptDurationSeconds": 7200
+    }
+  }

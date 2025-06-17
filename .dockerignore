@@ -1,0 +1,43 @@
+# Ignore datasets and models
+artifacts/data_ingestion/
+artifacts/prepare_base_model/
+
+# Ignore DVC cache and metadata
+.dvc/
+.dvcignore
+
+
+# Model and dataset files
+*.h5
+*.pt
+*.pth
+*.ckpt
+models/
+# Ignore Terraform state and cache
+terraform/
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+# Ignore logs and outputs
+logs/
+*.log
+
+# Ignore Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env/
+.venv/
+env/
+venv/
+
+# Ignore hidden/system files
+.DS_Store
+.idea/
+.vscode/
+
+# Ignore zipped/compressed files
+*.zip
+*.tar.gz
+*.tar
