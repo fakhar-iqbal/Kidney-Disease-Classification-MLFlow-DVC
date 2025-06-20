@@ -1,0 +1,219 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "layer": "cicd",
+      "type": "source",
+      "icon": "\ud83d\udcc1",
+      "id": "GitHub"
+    },
+    {
+      "layer": "cicd",
+      "type": "automation",
+      "icon": "\ud83d\udd04",
+      "id": "GitHub_Actions"
+    },
+    {
+      "layer": "cicd",
+      "type": "infrastructure",
+      "icon": "\ud83c\udfd7\ufe0f",
+      "id": "Terraform"
+    },
+    {
+      "layer": "cicd",
+      "type": "container",
+      "icon": "\ud83d\udc33",
+      "id": "Docker"
+    },
+    {
+      "layer": "storage",
+      "type": "registry",
+      "icon": "\ud83d\udce6",
+      "id": "ECR"
+    },
+    {
+      "layer": "storage",
+      "type": "storage",
+      "icon": "\ud83e\udea3",
+      "id": "S3_Data"
+    },
+    {
+      "layer": "storage",
+      "type": "versioning",
+      "icon": "\ud83d\udcca",
+      "id": "DVC"
+    },
+    {
+      "layer": "compute",
+      "type": "orchestrator",
+      "icon": "\u2699\ufe0f",
+      "id": "AWS_Batch"
+    },
+    {
+      "layer": "compute",
+      "type": "compute",
+      "icon": "\ud83d\udcb0",
+      "id": "Spot_Instances"
+    },
+    {
+      "layer": "compute",
+      "type": "serverless",
+      "icon": "\ud83d\ude80",
+      "id": "ECS_Fargate"
+    },
+    {
+      "layer": "application",
+      "type": "api",
+      "icon": "\ud83c\udf10",
+      "id": "Flask_API"
+    },
+    {
+      "layer": "application",
+      "type": "training",
+      "icon": "\ud83e\udde0",
+      "id": "ML_Training"
+    },
+    {
+      "layer": "application",
+      "type": "model",
+      "icon": "\ud83c\udfaf",
+      "id": "Model_Storage"
+    },
+    {
+      "layer": "client",
+      "type": "gateway",
+      "icon": "\ud83d\udd17",
+      "id": "API_Gateway"
+    },
+    {
+      "layer": "client",
+      "type": "user",
+      "icon": "\ud83d\udc64",
+      "id": "End_Users"
+    }
+  ],
+  "links": [
+    {
+      "flow": "trigger",
+      "weight": 3,
+      "source": "GitHub",
+      "target": "GitHub_Actions"
+    },
+    {
+      "flow": "deploy",
+      "weight": 3,
+      "source": "GitHub_Actions",
+      "target": "Terraform"
+    },
+    {
+      "flow": "build",
+      "weight": 3,
+      "source": "GitHub_Actions",
+      "target": "Docker"
+    },
+    {
+      "flow": "provision",
+      "weight": 2,
+      "source": "Terraform",
+      "target": "AWS_Batch"
+    },
+    {
+      "flow": "provision",
+      "weight": 2,
+      "source": "Terraform",
+      "target": "ECS_Fargate"
+    },
+    {
+      "flow": "provision",
+      "weight": 2,
+      "source": "Terraform",
+      "target": "S3_Data"
+    },
+    {
+      "flow": "push",
+      "weight": 3,
+      "source": "Docker",
+      "target": "ECR"
+    },
+    {
+      "flow": "pull",
+      "weight": 3,
+      "source": "ECR",
+      "target": "Spot_Instances"
+    },
+    {
+      "flow": "deploy",
+      "weight": 3,
+      "source": "ECR",
+      "target": "ECS_Fargate"
+    },
+    {
+      "flow": "data",
+      "weight": 4,
+      "source": "S3_Data",
+      "target": "ML_Training"
+    },
+    {
+      "flow": "load_model",
+      "weight": 4,
+      "source": "S3_Data",
+      "target": "Flask_API"
+    },
+    {
+      "flow": "sync",
+      "weight": 4,
+      "source": "DVC",
+      "target": "S3_Data"
+    },
+    {
+      "flow": "schedule",
+      "weight": 5,
+      "source": "AWS_Batch",
+      "target": "Spot_Instances"
+    },
+    {
+      "flow": "execute",
+      "weight": 5,
+      "source": "Spot_Instances",
+      "target": "ML_Training"
+    },
+    {
+      "flow": "host",
+      "weight": 3,
+      "source": "ECS_Fargate",
+      "target": "Flask_API"
+    },
+    {
+      "flow": "submit",
+      "weight": 5,
+      "source": "Flask_API",
+      "target": "AWS_Batch"
+    },
+    {
+      "flow": "expose",
+      "weight": 3,
+      "source": "Flask_API",
+      "target": "API_Gateway"
+    },
+    {
+      "flow": "save",
+      "weight": 4,
+      "source": "ML_Training",
+      "target": "Model_Storage"
+    },
+    {
+      "flow": "store",
+      "weight": 4,
+      "source": "Model_Storage",
+      "target": "S3_Data"
+    },
+    {
+      "flow": "serve",
+      "weight": 3,
+      "source": "API_Gateway",
+      "target": "End_Users"
+    }
+  ]
+}

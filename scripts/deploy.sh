@@ -411,61 +411,6 @@ setup_dvc_s3() {
 }
 
 # Function to create Batch job definition
-# create_batch_job_definition() {
-#     print_status "Creating AWS Batch job definition..."
-    
-#     # Create job definition JSON
-#     cat > temp-job-definition.json << EOF
-# {
-#     "jobDefinitionName": "kidney-disease-training-job",
-#     "type": "container",
-#     "containerProperties": {
-#         "image": "$ECR_REPO_URL:latest",
-#         "vcpus": 4,
-#         "memory": 8192,
-#         "resourceRequirements": [
-#             {
-#                 "type": "GPU",
-#                 "value": "1"
-#             }
-#         ],
-#         "command": [
-#             "python3",
-#             "/app/scripts/aws_batch_training.py"
-#         ],
-#         "environment": [
-#             {
-#                 "name": "AWS_DEFAULT_REGION",
-#                 "value": "$AWS_REGION"
-#             },
-#             {
-#                 "name": "S3_BUCKET",
-#                 "value": "$S3_BUCKET"
-#             }
-#         ],
-#         "mountPoints": [],
-#         "volumes": [],
-#         "ulimits": []
-#     },
-#     "timeout": {
-#         "attemptDurationSeconds": 7200
-#     },
-#     "retryStrategy": {
-#         "attempts": 1
-#     }
-# }
-# EOF
-    
-#     # Create job definition
-#     aws batch register-job-definition --cli-input-json file://temp-job-definition.json
-    
-#     # Clean up temp file
-#     rm temp-job-definition.json
-    
-#     print_status "Batch job definition created ✓"
-# }
-
-# Function to create Batch job definition
 create_batch_job_definition() {
     print_status "Creating AWS Batch job definition..."
     

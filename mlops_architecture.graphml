@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d4" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d3" for="edge" attr.name="flow" attr.type="string" />
+  <key id="d2" for="node" attr.name="icon" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="node" attr.name="layer" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="GitHub">
+      <data key="d0">cicd</data>
+      <data key="d1">source</data>
+      <data key="d2">📁</data>
+    </node>
+    <node id="GitHub_Actions">
+      <data key="d0">cicd</data>
+      <data key="d1">automation</data>
+      <data key="d2">🔄</data>
+    </node>
+    <node id="Terraform">
+      <data key="d0">cicd</data>
+      <data key="d1">infrastructure</data>
+      <data key="d2">🏗️</data>
+    </node>
+    <node id="Docker">
+      <data key="d0">cicd</data>
+      <data key="d1">container</data>
+      <data key="d2">🐳</data>
+    </node>
+    <node id="ECR">
+      <data key="d0">storage</data>
+      <data key="d1">registry</data>
+      <data key="d2">📦</data>
+    </node>
+    <node id="S3_Data">
+      <data key="d0">storage</data>
+      <data key="d1">storage</data>
+      <data key="d2">🪣</data>
+    </node>
+    <node id="DVC">
+      <data key="d0">storage</data>
+      <data key="d1">versioning</data>
+      <data key="d2">📊</data>
+    </node>
+    <node id="AWS_Batch">
+      <data key="d0">compute</data>
+      <data key="d1">orchestrator</data>
+      <data key="d2">⚙️</data>
+    </node>
+    <node id="Spot_Instances">
+      <data key="d0">compute</data>
+      <data key="d1">compute</data>
+      <data key="d2">💰</data>
+    </node>
+    <node id="ECS_Fargate">
+      <data key="d0">compute</data>
+      <data key="d1">serverless</data>
+      <data key="d2">🚀</data>
+    </node>
+    <node id="Flask_API">
+      <data key="d0">application</data>
+      <data key="d1">api</data>
+      <data key="d2">🌐</data>
+    </node>
+    <node id="ML_Training">
+      <data key="d0">application</data>
+      <data key="d1">training</data>
+      <data key="d2">🧠</data>
+    </node>
+    <node id="Model_Storage">
+      <data key="d0">application</data>
+      <data key="d1">model</data>
+      <data key="d2">🎯</data>
+    </node>
+    <node id="API_Gateway">
+      <data key="d0">client</data>
+      <data key="d1">gateway</data>
+      <data key="d2">🔗</data>
+    </node>
+    <node id="End_Users">
+      <data key="d0">client</data>
+      <data key="d1">user</data>
+      <data key="d2">👤</data>
+    </node>
+    <edge source="GitHub" target="GitHub_Actions">
+      <data key="d3">trigger</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="GitHub_Actions" target="Terraform">
+      <data key="d3">deploy</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="GitHub_Actions" target="Docker">
+      <data key="d3">build</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="Terraform" target="AWS_Batch">
+      <data key="d3">provision</data>
+      <data key="d4">2</data>
+    </edge>
+    <edge source="Terraform" target="ECS_Fargate">
+      <data key="d3">provision</data>
+      <data key="d4">2</data>
+    </edge>
+    <edge source="Terraform" target="S3_Data">
+      <data key="d3">provision</data>
+      <data key="d4">2</data>
+    </edge>
+    <edge source="Docker" target="ECR">
+      <data key="d3">push</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="ECR" target="Spot_Instances">
+      <data key="d3">pull</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="ECR" target="ECS_Fargate">
+      <data key="d3">deploy</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="S3_Data" target="ML_Training">
+      <data key="d3">data</data>
+      <data key="d4">4</data>
+    </edge>
+    <edge source="S3_Data" target="Flask_API">
+      <data key="d3">load_model</data>
+      <data key="d4">4</data>
+    </edge>
+    <edge source="DVC" target="S3_Data">
+      <data key="d3">sync</data>
+      <data key="d4">4</data>
+    </edge>
+    <edge source="AWS_Batch" target="Spot_Instances">
+      <data key="d3">schedule</data>
+      <data key="d4">5</data>
+    </edge>
+    <edge source="Spot_Instances" target="ML_Training">
+      <data key="d3">execute</data>
+      <data key="d4">5</data>
+    </edge>
+    <edge source="ECS_Fargate" target="Flask_API">
+      <data key="d3">host</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="Flask_API" target="AWS_Batch">
+      <data key="d3">submit</data>
+      <data key="d4">5</data>
+    </edge>
+    <edge source="Flask_API" target="API_Gateway">
+      <data key="d3">expose</data>
+      <data key="d4">3</data>
+    </edge>
+    <edge source="ML_Training" target="Model_Storage">
+      <data key="d3">save</data>
+      <data key="d4">4</data>
+    </edge>
+    <edge source="Model_Storage" target="S3_Data">
+      <data key="d3">store</data>
+      <data key="d4">4</data>
+    </edge>
+    <edge source="API_Gateway" target="End_Users">
+      <data key="d3">serve</data>
+      <data key="d4">3</data>
+    </edge>
+  </graph>
+</graphml>
