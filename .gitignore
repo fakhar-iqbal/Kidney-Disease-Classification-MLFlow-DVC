@@ -1,3 +1,75 @@
 kidney/
 
 artifacts/*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# DVC
+.dvc/cache/
+.dvc/tmp/
+*.dvc
+
+# Data & Models
+data/
+datasets/
+*.csv
+*.tsv
+*.xlsx
+*.h5
+*.pth
+*.ckpt
+*.joblib
+*.npz
+*.npy
+*.pkl
+*.sav
+
+# Logs & Outputs
+*.log
+logs/
+output/
+outputs/
+runs/
+mlruns/
+
+# Secrets
+secrets.yaml
+*.key
+*.pem
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Docker
+.docker/
+
+# AWS
+.aws/
+
+# Build
+build/
+dist/
+*.egg-info/
