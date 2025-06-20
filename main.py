@@ -45,7 +45,11 @@ STAGE_NAME = "Evaluate Model Stage"
 try:
     logger.info(f">>>>>>>>>>>> stage {STAGE_NAME} started <<<<<<<<<<<<<")
     eval_model = EvaluateModelPipeline()
+<<<<<<< HEAD
     eval_model.main()
+=======
+    eval.main()
+>>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
     logger.info(f">>>>>>>>>> stage {STAGE_NAME} completed <<<<<<<<<<\n\nx=============x")
 except Exception as e:
     raise e
