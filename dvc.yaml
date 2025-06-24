@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # stages:
 #   data_ingestion:
 #     cmd: python src/cnnClassifier/pipeline/stage01_data_ingestion.py
@@ -56,8 +55,7 @@
 
 
 # dvc.yaml (Enhanced version)
-=======
->>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
+
 stages:
   data_ingestion:
     cmd: python src/cnnClassifier/pipeline/stage01_data_ingestion.py
@@ -65,13 +63,10 @@ stages:
       - src/cnnClassifier/pipeline/stage01_data_ingestion.py
       - config/config.yaml
     outs:
-<<<<<<< HEAD
       - artifacts/data_ingestion/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone:
           cache: true
           persist: true
-=======
       - artifacts/data_ingestion/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone
->>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
 
   prepare_base_model:
     cmd: python src/cnnClassifier/pipeline/stage02_prepare_base_model.py
@@ -85,13 +80,10 @@ stages:
       - WEIGHTS
       - LEARNING_RATE
     outs:
-<<<<<<< HEAD
       - artifacts/prepare_base_model:
           cache: true
           persist: true
-=======
       - artifacts/prepare_base_model
->>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
 
   training:
     cmd: python src/cnnClassifier/pipeline/stage03_training.py
@@ -106,14 +98,11 @@ stages:
       - BATCH_SIZE
       - AUGMENTATION
     outs:
-<<<<<<< HEAD
       - model/model.h5:
           cache: true
           persist: true
 
-=======
       - model/model.h5
->>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
   evaluation:
     cmd: python src/cnnClassifier/pipeline/stage04_model_evaluation.py
     deps:
@@ -126,10 +115,7 @@ stages:
       - BATCH_SIZE
     metrics:
       - scores.json:
-<<<<<<< HEAD
           cache: false
     plots:
       - plots/training_history.json:
-=======
->>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
           cache: false

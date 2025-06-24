@@ -1,10 +1,8 @@
 tensorflow
 pandas
 dvc
-<<<<<<< HEAD
-=======
+
 mlflow
->>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
 notebook
 numpy
 matplotlib
@@ -19,7 +17,6 @@ scipy
 Flask
 Flask-Cors
 gdown
-<<<<<<< HEAD
 # Data versioning and pipeline
 dvc[s3]
 gunicorn
@@ -30,6 +27,5 @@ boto3
 s3transfer
 
 ujson
-=======
->>>>>>> 5adff314d02f66028c6e638381928b3ec4252372
+
 -e .
